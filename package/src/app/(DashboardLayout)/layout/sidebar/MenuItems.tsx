@@ -33,7 +33,7 @@ const Menuitems = [
     id: uniqueId(),
     title: "Stores",
     icon: IconCopy,
-    href: "/utilities/shadow",
+    href: "/stores/list",
   },
   {
     id: uniqueId(),
@@ -49,27 +49,112 @@ const Menuitems = [
     id: uniqueId(),
     title: "In Progress",
     icon: IconLogin,
-    href: "/authentication/login",
+    href: "/jobs",
   },
+
   {
     id: uniqueId(),
     title: "Queued",
     icon: IconUserPlus,
-    href: "/authentication/register",
+    href: "#",
   },
   {
     id: uniqueId(),
     title: "Completed",
     icon: IconUserPlus,
-    href: "/authentication/register",
+    href: "#",
   },
   {
     id: uniqueId(),
     title: "Jobs",
     icon: IconUserPlus,
-    href: "/authentication/register",
+    href: "/jobs",
+  },
+  {
+    navlabel: true,
+    subheader: "Suppliers",
+  },
+  {
+    id: uniqueId(),
+    title: "Suppliers",
+    icon: IconHelpCircle,
+    href: "/suppliers",
+  },
+  {
+    navlabel: true,
+    subheader: "Delivery",
+  },
+  {
+    id: uniqueId(),
+    title: "Full Delivery",
+    icon: IconHelpCircle,
+    href: "/delivery",
+  },
+  {
+    id: uniqueId(),
+    title: "Part Delivery",
+    icon: IconHelpCircle,
+    href: "/delivery-part",
+  },
+  {
+    id: uniqueId(),
+    title: "Rejected",
+    icon: IconHelpCircle,
+    href: "/delivery-rejected",
   },
 
+  {
+    navlabel: true,
+    subheader: "Invoices",
+  },
+  {
+    id: uniqueId(),
+    title: "Invoices",
+    icon: IconHelpCircle,
+    href: "/invoice",
+  },
+
+  {
+    navlabel: true,
+    subheader: "Reports",
+  },
+  {
+    id: uniqueId(),
+    title: "Reports",
+    icon: IconHelpCircle,
+    href: "/reports",
+  },
+  {
+    id: uniqueId(),
+    title: "Jobs",
+    icon: IconHelpCircle,
+    href: "/reports?2",
+  },
+  {
+    id: uniqueId(),
+    title: "Invoices",
+    icon: IconHelpCircle,
+    href: "/reports?2",
+  },
+  {
+    id: uniqueId(),
+    title: "Stores",
+    icon: IconHelpCircle,
+    href: "/reports?2",
+  },
+
+  {
+    id: uniqueId(),
+    title: "Suppliers",
+    icon: IconHelpCircle,
+    href: "/reports?2",
+  },
+  {
+    id: uniqueId(),
+    title: "Customers",
+    icon: IconHelpCircle,
+    href: "/reports?2",
+  },
   {
     navlabel: false,
     subheader: "Support",
@@ -83,12 +168,12 @@ const Menuitems = [
   },
   {
     navlabel: true,
-    subheader: "Sample Pages",
+    subheader: "Training Material",
   },
 
   {
     id: uniqueId(),
-    title: "Documentation",
+    title: "Training",
     icon: IconAperture,
     href: "/sample-page",
   },
