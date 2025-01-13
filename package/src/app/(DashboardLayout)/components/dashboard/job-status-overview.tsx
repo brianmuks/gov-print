@@ -1,6 +1,10 @@
+"use client";
+
 import { Card } from "@mui/material";
 import React, { useState } from "react";
-import Chart from "react-apexcharts";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const JobStatusOverview = () => {
   const [chartData] = useState({
