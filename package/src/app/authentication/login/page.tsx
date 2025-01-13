@@ -14,7 +14,7 @@ const Login2 = () => {
           position: "relative",
           "&:before": {
             content: '""',
-            background: "radial-gradient(#d2f1df, #d3d7fa, #bad8f4)",
+            // background: "radial-gradient(#d2f1df, #d3d7fa, #bad8f4)",
             backgroundSize: "400% 400%",
             animation: "gradient 15s ease infinite",
             position: "absolute",
@@ -41,6 +41,7 @@ const Login2 = () => {
             alignItems="center"
           >
             <Card
+              className="auth-card"
               elevation={9}
               sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
             >
@@ -54,8 +55,9 @@ const Login2 = () => {
                     textAlign="center"
                     color="textSecondary"
                     mb={1}
+                    className="tagline"
                   >
-                    Your Social Campaigns
+                    Government Printers
                   </Typography>
                 }
                 subtitle={
@@ -70,7 +72,7 @@ const Login2 = () => {
                       variant="h6"
                       fontWeight="500"
                     >
-                      New to Modernize?
+                      New to Government Printers?
                     </Typography>
                     <Typography
                       component={Link}

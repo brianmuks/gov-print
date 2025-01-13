@@ -1,3 +1,4 @@
+import { HelpCenter } from "@mui/icons-material";
 import {
   IconAperture,
   IconCopy,
@@ -6,6 +7,7 @@ import {
   IconMoodHappy,
   IconTypography,
   IconUserPlus,
+  IconHelpCircle,
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -24,49 +26,69 @@ const Menuitems = [
   },
   {
     navlabel: true,
-    subheader: "Utilities",
+    subheader: "Stores",
   },
+
   {
     id: uniqueId(),
-    title: "Typography",
-    icon: IconTypography,
-    href: "/utilities/typography",
-  },
-  {
-    id: uniqueId(),
-    title: "Shadow",
+    title: "Stores",
     icon: IconCopy,
     href: "/utilities/shadow",
   },
   {
+    id: uniqueId(),
+    title: "Categories",
+    icon: IconTypography,
+    href: "/utilities/typography",
+  },
+  {
     navlabel: true,
-    subheader: "Auth",
+    subheader: "Jobs",
   },
   {
     id: uniqueId(),
-    title: "Login",
+    title: "In Progress",
     icon: IconLogin,
     href: "/authentication/login",
   },
   {
     id: uniqueId(),
-    title: "Register",
+    title: "Queued",
     icon: IconUserPlus,
     href: "/authentication/register",
   },
   {
-    navlabel: true,
-    subheader: "Extra",
+    id: uniqueId(),
+    title: "Completed",
+    icon: IconUserPlus,
+    href: "/authentication/register",
   },
   {
     id: uniqueId(),
-    title: "Icons",
-    icon: IconMoodHappy,
+    title: "Jobs",
+    icon: IconUserPlus,
+    href: "/authentication/register",
+  },
+
+  {
+    navlabel: false,
+    subheader: "Support",
+  },
+
+  {
+    id: uniqueId(),
+    title: "Need help ?",
+    icon: IconHelpCircle,
     href: "/icons",
   },
   {
+    navlabel: true,
+    subheader: "Sample Pages",
+  },
+
+  {
     id: uniqueId(),
-    title: "Sample Page",
+    title: "Documentation",
     icon: IconAperture,
     href: "/sample-page",
   },
