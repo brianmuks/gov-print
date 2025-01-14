@@ -72,7 +72,7 @@ const Login2 = () => {
                       variant="h6"
                       fontWeight="500"
                     >
-                      New to Government Printers?
+                      New to Government Printers ?
                     </Typography>
                     <Typography
                       component={Link}
