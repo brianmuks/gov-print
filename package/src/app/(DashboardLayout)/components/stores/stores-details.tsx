@@ -62,9 +62,21 @@ function EditModal({ open, item, onClose, onSave }: EditModalProps) {
     }
   );
 
+  const [restockQuantity, setRestockQuantity] = useState(0);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(formData);
+  };
+
+  const handleRestock = () => {
+    const updatedQuantity = formData.quantity + restockQuantity;
+    setFormData({
+      ...formData,
+      quantity: updatedQuantity,
+      lastReorder: new Date().toISOString().split("T")[0], // Update reorder date
+    });
+    setRestockQuantity(0); // Reset restock quantity
   };
 
   return (
@@ -116,6 +128,27 @@ function EditModal({ open, item, onClose, onSave }: EditModalProps) {
               }
               InputLabelProps={{ shrink: true }}
             />
+
+            {/* Restock Section */}
+            <Typography variant="h6" mt={2}>
+              Request Refill/Restock
+            </Typography>
+            <TextField
+              fullWidth
+              type="number"
+              label="Quantity to Restock"
+              value={restockQuantity}
+              onChange={(e) => setRestockQuantity(parseInt(e.target.value))}
+            />
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{ mt: 2 }}
+              onClick={handleRestock}
+              disabled={restockQuantity <= 0}
+            >
+              Restock
+            </Button>
           </div>
         </DialogContent>
         <DialogActions>
